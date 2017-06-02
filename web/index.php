@@ -10,5 +10,9 @@ $app->get('/', function () use ($app) {
     $app->render('main.php');
 });
 
+$app->get('/hello', function () use ($app) {
+    echo 'howdy!';
+});
+
 $app->run();
 
