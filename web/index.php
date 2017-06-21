@@ -15,9 +15,9 @@ $app->get('/hello', function () use ($app) {
     echo 'howdy!';
 });
 
-$app->get('/contact', function() use ($app) {
+$app->map('/contact', function() use ($app) {
     $app->render("contact.php");
-});
+})->via("GET","POST");
 
 $app->run();
 
