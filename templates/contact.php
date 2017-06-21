@@ -1,5 +1,11 @@
 <h1>Contact Us</h1>
 
+<?php if(isset($feedback)): ?>
+
+<p><?=$feedback?></p>
+
+<?php else: ?>
+
 <form method="post" name="contact-form">
 <label for="message">What would you like us to know?</label><br/>
 <textarea name="message" id="message"></textarea><br /><br />
@@ -9,3 +15,5 @@
 
 <input type="submit" value="Send" />
 </form>
+
+<?php endif; ?>
